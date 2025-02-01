@@ -1,0 +1,274 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+}
+
+footer {
+    // border: 2px solid red;
+    height: 65vh;
+    width: 100vw;
+    @include breakpoint(large){
+        height: 65vh;
+    }
+    @include breakpoint(small){
+        height:130vh;
+    }
+
+    #footerStart {
+        // border: 2px solid blue;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #footerCenter {
+            // border: 2px solid purple;
+            height: 90%;
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include breakpoint(large){
+                width: 85%;
+            }
+            @include breakpoint(medium){
+                width: 95%;
+            }
+
+            #asharOne {
+                // border: 2px solid green;
+                height: 25%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+
+                #chotuThirteen {
+                    // border: 2px solid red;
+                    width: 25%;
+                    height: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    @include breakpoint(large){
+                        width: 45%;
+                    }
+                    @include breakpoint(narrow){
+                        width: 85%;
+                    }
+
+                    li {
+                        list-style-type: none;
+
+                        h3 {
+                            font-size: 20px;
+                            color: #003764;
+                            @include breakpoint(narrow){
+                                font-size: 18px;
+                            }
+                        }
+
+                        p {
+                            font-size: 15px;
+                            color: #666666;
+                        }
+                    }
+                }
+
+                #chotuFourteen {
+                    // border: 2px solid blue;
+                    height: 40%;
+                    width: 55%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    @include breakpoint(narrow){
+                        width: 85%;
+                    }
+
+                    li {
+                        list-style-type: none;
+
+                        h2 {
+                            font-size: 25px;
+                            color: #DC188B;
+                            @include breakpoint(small){
+                                font-size: 20px;
+                            }
+                            @include breakpoint(narrow){
+                                font-size: 18px;
+                            }
+
+                            i {
+                                margin-right: 15px;
+                                @include breakpoint(small){
+                                    margin-right: 10px;
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+            }
+
+            #asharTwo {
+                // border: 2px solid orange;
+                height: 70%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                @include breakpoint(large){
+                    height: 65%;
+                }
+                @include breakpoint(small){
+                    height: 85%;
+                    display:grid;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                #chotuFifteen {
+                    // border: 2px solid red;
+                    width: 25%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    @include breakpoint(small){
+                        width: 90%;
+                    }
+
+                    li {
+                        list-style-type: none;
+
+                        h3 {
+                            font-size: 25px;
+                            color: #003764;
+                            @include breakpoint(narrow){
+                                font-size: 17px;
+                            }
+                        }
+
+                        a {
+                            font-size: 20px;
+                            color: #666666;
+                            @include breakpoint(narrow){
+                                font-size: 15px;
+                            }
+                        }
+                    }
+
+                }
+
+                #chotuSixteen {
+                    // border: 2px solid blue;
+                    width: 25%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    @include breakpoint(small){
+                        width: 90%;
+                    }
+
+                    li {
+                        list-style-type: none;
+
+                        h3 {
+                            font-size: 25px;
+                            color: #003764;
+                            @include breakpoint(narrow){
+                                font-size: 17px;
+                            }
+                        }
+
+                        a {
+                            font-size: 20px;
+                            color: #666666;
+                            @include breakpoint(narrow){
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+
+                #chotuSeventeen {
+                    // border: 2px solid green;
+                    width: 25%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    @include breakpoint(small){
+                        width: 90%;
+                    }
+
+                    li {
+                        list-style-type: none;
+
+                        h3 {
+                            font-size: 25px;
+                            color: #003764;
+                            @include breakpoint(narrow){
+                                font-size: 17px;
+                            }
+                        }
+
+                        a {
+                            font-size: 20px;
+                            color: #666666;
+                            @include breakpoint(narrow){
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+
+                #chotuEighteen {
+                    // border: 2px solid purple;
+                    width: 25%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    @include breakpoint(small){
+                        width: 90%;
+                    }
+
+                    li {
+                        list-style-type: none;
+
+                        h3 {
+                            font-size: 25px;
+                            color: #003764;
+                            @include breakpoint(narrow){
+                                font-size: 17px;
+                            }
+                        }
+
+                        a {
+                            font-size: 20px;
+                            color: #666666;
+                            margin-left: 5px;
+                            @include breakpoint(narrow){
+                                font-size: 15px;
+                            }
+                        }
+
+                        i {
+                            font-size: 25px;
+                            @include breakpoint(narrow){
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

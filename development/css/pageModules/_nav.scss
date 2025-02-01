@@ -1,0 +1,228 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    // border: 2px solid red;
+    width: 100vw;
+    height: 75vh;
+    
+
+    #navbar {
+        // border: 2px solid blue;
+        color: white;
+        width: 100%;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        @include breakpoint(medium){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+        img {
+            width: 15%;
+            @include breakpoint(medium){
+                width: 20%;
+                margin-left: 25px;
+            }
+            @include breakpoint(small){
+                width: 25%;
+            }
+            @include breakpoint(narrow){
+                width: 40%;
+            }
+        }
+
+        #partOne {
+            // border: 2px solid green;
+            width: 30%;
+            height: 35%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            @include breakpoint(large){
+                width: 40%;
+                margin-top: 10px;
+            }
+            @include breakpoint(medium){
+                display: none;
+            }
+
+
+            li {
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        #partTwo {
+            // border: 2px solid green;
+            width: 20%;
+            height: 40%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            @include breakpoint(large){
+                width: 25%;
+                margin-top: 10px;
+            }
+            @include breakpoint(medium){
+                display: none;
+
+            }
+
+            li {
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 20px;
+                }
+
+                button {
+                    font-size: 25px;
+                    background-color: #DC188B;
+                    color: white;
+                    // width: 40%;
+                    // height: 85%;
+                    @include breakpoint(large){
+                        font-size: 20px;
+                    }
+
+                    i {
+                        font-size: 25px;
+                        padding-right: 15px;
+                        @include breakpoint(large){
+                            padding-right: 6px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #menuIcon {
+            display: none;
+            @include breakpoint(medium){
+                display: block;
+
+                i {
+                    color: black;
+                    font-size: 30px;
+                    margin-right: 25px;
+                    @include breakpoint(narrow){
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    #backgroundText {
+        // border: 5px solid black;
+        width: 100%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @include breakpoint(large){
+            height: 90%;
+        }
+
+
+        video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+        }
+
+        #twoListItems {
+            // border: 2px solid red;
+            width: 50%;
+            height: 85%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @include breakpoint(large){
+                width: 75%;
+            }
+            @include breakpoint(medium){
+                width: 85%;
+            }
+            @include breakpoint(small){
+                width: 95%;
+            }
+            @include breakpoint(narrow){
+                width: 100%;
+            }
+
+            li {
+                list-style-type: none;
+
+                h1 {
+                    color: white;
+                    font-size: 45px;
+                    padding-bottom: 20px;
+                    @include breakpoint(medium){
+                        font-size: 42px;
+                    }
+                    @include breakpoint(small){
+                        font-size: 35px;
+                    }
+                    @include breakpoint(narrow){
+                        font-size: 23px;
+                    }
+                }
+
+                h3 {
+                    color: white;
+                    font-size: 30px;
+                    padding-top: 15px;
+                    @include breakpoint(medium){
+                        font-size: 20px;
+                    }
+                    @include breakpoint(narrow){
+                        font-size: 15px;
+                    }
+
+                    i {
+                        font-size: 20px;
+                        margin-left: 20px;
+                        @include breakpoint(narrow){
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+    }
+}
