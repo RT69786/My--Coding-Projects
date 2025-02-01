@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Lato:100,400,300,700,900,300italic|Roboto+Slab:400,100,300,700);
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+//Color Palate
+$white: #ffffff;
+$black: #111111;
+$black: red;
+$orange: #ffbb33;
+
+$green: #669900;
+$seagreen: #56afab;
+$blue: #0099cb;
+$darkorange: #ef7d1a;
+$parrotgreen: #97be0d;
+$mySkillsColor: #235f46;
+$aboutMeColor: #58aeab;
+$myWorkColor: #ef7d1a;
+$hireMeColor: #97be0d;
+
+$backgroundColor: $white;
+$typeDefault: $black;
+$navBackground: $blue;
+$navForeground: $white;
+$navHover: $orange;
+$headerSubBg: $black;
+
+
+
+//CURRENT PROJECT
+
+//COLOR
+$lightGreen : #7afc13;
+$hoverGreen: #0F2B05;
+$littleDarkGreen: #1e4734;
+
+//FONT 
+$fontAll: SUSE;
+
+
+//Font variables
+$dancingFont: "Dancing Script", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$dancingNormal: 400;
+$dancingBold: 700;
+$latoFont: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$latoLight: 100;
+$latoNormal: 300;
+$latoNormalItalic: 300italic;
+$latoBold: 700;
+$latoHeavy: 900;
+$robotoFont: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$robotoLight: 100;
+$robotoNormal: 300;
+$robotoBold: 400;
+$robotoHeavy: 700;
+
+$fontfamily: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$light: 200;
+$normal: 400;
+$bold: 600;
+$heavy: 800;
+
+// body
+$bodyFont: $normal 2rem / 100% $fontfamily;
+$bodyFontHead: $bold 3.2rem / 130% $fontfamily;
+
+//Layout breakponts
+$narrow: 400px;
+$small: 650px;
+$medium: 960px;
+$wide: 1200px;
+
+//Layout variables
+$default-border-radius: 0.5rem;
