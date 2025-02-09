@@ -1,0 +1,828 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    height: 600vh;
+    width: 100vw;
+    // border: 5px solid red;
+    display: flex;
+
+    @include breakpoint(large) {
+        // height: 750vh;
+    }
+    @include breakpoint(narrow){
+        height:760vh;
+    }
+
+
+    #mainWork {
+        // border: 10px solid black;
+        height: 75%;
+        width: 100%;
+
+        #asharOne {
+            // border: 4px solid green;
+            height: 20%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include breakpoint(large) {
+                height: 20%;
+                display: flex;
+                justify-content: space-between;
+            }
+            @include breakpoint(medium){
+                display: flex;
+                justify-content:  space-between;
+            }
+            @include breakpoint(small){
+                display: flex;
+                justify-content: center;
+            }
+            @include breakpoint(narrow){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 20%;
+
+            }
+
+            img {
+                height: 100%;
+                width: 60%;
+
+                @include breakpoint(large) {
+                    // border: 2px solid red;
+                    height: 95%;
+                    width: 60%;
+                    // margin-left: 15px;
+                }
+                @include breakpoint(medium){
+                    width:55% ;
+                    height:90% ;
+                    margin-left: 0px;
+                }
+                @include breakpoint(small){
+                    width: 65%;
+                }
+                @include breakpoint(narrow){
+                    width: 100%;
+                    height: 45%;
+                    
+                }
+            }
+
+            #textOne {
+                // border: 2px solid purple;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 35%;
+                width: 35%;
+
+                @include breakpoint(large) {
+                    height: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    margin-right: 25px;
+                }
+                @include breakpoint(medium){
+                    height: 75%;
+                    margin-right: 25px;
+                }
+                @include breakpoint(small){
+                    height: 100%;
+                }
+                @include breakpoint(narrow){
+                    height:50% ;
+                    width: 85%;
+                    margin-right: 0px;
+                }
+
+                h2 {
+                    font-size: 45px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 39.9px;
+                        font-family: 'Times New Roman', Times, serif;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 19.1px;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                }
+
+                button {
+                    // border: 2px solid yellow;
+                    width: 30%;
+                    height: 15%;
+                    font-size: 20px;
+                    background-color: #403531;
+                    color: white;
+
+                    @include breakpoint(large) {
+                        width: 45%;
+                        height: 10%;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                    @include breakpoint(small){
+                        width: 75%;
+                        height: 5%;
+                    }
+                    @include breakpoint(narrow){
+                        height: 8%;
+                        width:55% ;
+                    }
+                }
+            } 
+        }
+
+        #asharTwo {
+            // border: 5px solid purple;
+            height: 20%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include breakpoint(large) {
+                height: 20%;
+                display: flex;
+                justify-content: space-between;
+            }
+            @include breakpoint(medium){
+                display: flex;
+                justify-content:  space-between;
+            }
+            @include breakpoint(small){
+                display: flex;
+                justify-content: center;
+            }
+            @include breakpoint(narrow){
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            img {
+                height: 100%;
+                width: 55%;
+
+                @include breakpoint(large) {
+                    // border: 2px solid red;
+                    height: 95%;
+                    width: 50%;
+                    // margin-right: 15px;
+                }
+                @include breakpoint(medium){
+                    height: 95%;
+                    width: 55%;
+                    margin-right: 0px;
+                }
+                @include breakpoint(small){
+                    width: 60%;
+                }
+                @include breakpoint(narrow){
+                    width: 100%;
+                    height: 55%;
+                }
+            }
+
+            #textTwo {
+                // border: 2px solid blue;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 35%;
+                width: 35%;
+
+                @include breakpoint(large) {
+                    // padding: 20px;
+                    height: 45%;
+                    width: 40%;
+                    margin-left: 25px;
+                }
+                @include breakpoint(medium){
+                    height: 50%;
+                    width: 35%;
+                    margin-left: 25px;
+                }
+                @include breakpoint(small){
+                    margin-left: 0px;
+                    width: 30%;
+                    height: 55%;
+                }
+                @include breakpoint(narrow){
+                    margin-left: 0px;
+                    width: 85%;
+                    height: 35%;
+                }
+
+                h2 {
+                    font-size: 45px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 39.9px;
+                        font-family: 'Times New Roman', Times, serif;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 19.1px;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                }
+
+                button {
+                    width: 30%;
+                    height: 15%;
+                    font-size: 20px;
+                    background-color: #403531;
+                    color: white;
+
+                    @include breakpoint(large) {
+                        width: 45%;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                    @include breakpoint(medium){
+                         width: 65%;
+                    }
+                    @include breakpoint(small){
+                        width: 100%;
+                        height: 10%;
+                    }
+                    @include breakpoint(narrow){
+                        width: 65%;
+                    }
+                }
+            }
+
+        }
+
+        #asharThree {
+            // border: 2px solid red;
+            height: 20%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include breakpoint(large) {
+                height: 20%;
+                display: flex;
+                justify-content: space-between;
+            }
+            @include breakpoint(medium){
+                display: flex;
+                justify-content:  space-between;
+            }
+            @include breakpoint(small){
+                display: flex;
+                justify-content: space-between;
+            }
+            @include breakpoint(narrow){
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 20%;
+            }
+
+            img {
+                height: 100%;
+
+                @include breakpoint(large) {
+                    height: 95%;
+                }
+                @include breakpoint(medium){
+                    width: 60%;
+                }
+                @include breakpoint(small){
+                    width: 55%;
+                }
+                @include breakpoint(narrow){
+                    width: 100%;
+                    height: 45%;
+                }
+
+            }
+
+            #textThree {
+                // border: 2px solid orange;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 35%;
+                width: 30%;
+
+                @include breakpoint(large) {
+                    height: 60%;
+                    width: 35%;
+                    margin-right: 25px;
+                }
+                @include breakpoint(medium){
+                    height: 65%;
+                    width: 35%;
+                    margin-right: 25px;
+                }
+                @include breakpoint(small){
+                    margin-right: 25px;
+                    width: 30%;
+                    height: 95%;
+                }
+                @include breakpoint(narrow){
+                    margin-right: 0px;
+                    height: 50%;
+                    width: 85%;
+                }
+
+                h2 {
+                    font-size: 45px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 39.9px;
+                        font-family: 'Times New Roman', Times, serif;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 19.1px;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                }
+
+                a {
+                    color: #403531;
+                    font-size: 20px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                }
+            }
+        }
+
+        #asharFour {
+            // border: 2px solid orange;
+            height: 20%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include breakpoint(large) {
+                height: 20%;
+                display: flex;
+                justify-content: space-between;
+            }
+            @include breakpoint(medium){
+                display: flex;
+                justify-content: space-between;
+            }
+            @include breakpoint(small){
+                display: flex;
+                justify-content: center;
+            }
+            @include breakpoint(narrow){
+                display: flex;
+                justify-content:center ;
+                flex-direction: column-reverse;
+            }
+
+            img {
+                height: 100%;
+
+                @include breakpoint(large) {
+                    width: 55%;
+                    height: 95%;
+                }
+                @include breakpoint(medium){
+                    height: 95%;
+                }
+                @include breakpoint(narrow){
+                    width: 100%;
+                    height: 55%;
+                }
+            }
+
+            #textFour {
+                // border: 2px solid purple;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 35%;
+                width: 30%;
+
+                @include breakpoint(large) {
+                    height: 50%;
+                    width: 35%;
+                    margin-left: 25px;
+                }
+                @include breakpoint(medium){
+                    height: 55%;
+                    margin-left: 25px;
+                }
+                @include breakpoint(small){
+                    width:45%;
+                    margin-left: 25px;
+                }
+                @include breakpoint(narrow){
+                    margin-left: 0px;
+                    width: 85%;
+                    height: 40%;
+                }
+
+                h2 {
+                    font-size: 45px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 39.9px;
+                        font-family: 'Times New Roman', Times, serif;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 19.1px;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                }
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50%;
+                    height: 15%;
+                    background-color: #403531;
+                    color: white;
+                    font-size: 20px;
+
+                    @include breakpoint(large) {
+                        width: 60%;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                    @include breakpoint(medium){
+                        width: 75%;
+                    }
+                    @include breakpoint(small){
+                        width: 95%;
+                    }
+                    @include breakpoint(narrow){
+                        width: 75%;
+                        height: 10%;
+                    }
+                }
+            }
+        }
+
+        #asharFive {
+            // border: 2px solid red;
+            height: 20%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include breakpoint(large) {
+                height: 20%;
+                display: flex;
+                justify-content: space-between;
+            }
+            @include breakpoint(medium){
+                display: flex;
+                justify-content: space-between;
+            }
+            @include breakpoint(small){
+                display: flex;
+                justify-content: center;
+            }
+            @include breakpoint(narrow){
+                display: flex;
+                flex-direction: column;
+                height: 20%;
+
+            }
+
+            img {
+                height: 100%;
+
+                @include breakpoint(large) {
+                    width: 50%;
+                    height: 95%;
+                }
+                @include breakpoint(narrow){
+                    width: 100%;
+                    height: 55%;
+                }
+            }
+
+            #textFive {
+                // border: 2px solid purple;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 35%;
+                width: 35%;
+
+                @include breakpoint(large) {
+                    height: 45%;
+                    width: 40%;
+                    margin-right: 25px;
+                }
+                @include breakpoint(medium){
+                    height: 50%;
+                    margin-right: 25px;
+                }
+                @include breakpoint(small){
+                    width: 30%;
+                    height: 60%;
+                }
+                @include breakpoint(narrow){
+                    width: 75%;
+                    height: 35%;
+                
+                }
+
+                h2 {
+                    font-size: 45px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 39.9px;
+                        font-family: 'Times New Roman', Times, serif;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 19.1px;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                }
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 30%;
+                    height: 15%;
+                    background-color: #403531;
+                    color: white;
+                    font-size: 20px;
+
+                    @include breakpoint(large) {
+                        width: 40%;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                    @include breakpoint(medium){
+                        width: 45%;
+                    }
+                    @include breakpoint(small){
+                        width: 100%;
+                        height: 10%;
+                    }
+                    @include breakpoint(narrow){
+                        width: 65%;
+                    }
+                }
+            }
+        }
+
+        #asharSix {
+            // border: 2px solid red;
+            height: 15%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include breakpoint(large) {
+                height: 15%;
+                display: flex;
+                justify-content:space-between;
+            }
+            @include breakpoint(medium){
+                display: flex;
+                justify-content: space-between;
+            }
+            @include breakpoint(small){
+                display: flex;
+                justify-content: space-between;
+            }
+            @include breakpoint(narrow){
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+            }
+
+            img {
+                height: 100%;
+
+                @include breakpoint(large){
+                    height: 95%;
+                    width: 50%;
+                }
+                @include breakpoint(narrow){
+                    width: 100%;
+                    height: 45%;
+                }
+            }
+
+            #textSix {
+                // border: 2px solid purple;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 40%;
+                width: 35%;
+
+                @include breakpoint(large) {
+                    height: 60%;
+                    margin-left: 25px;
+                }
+                @include breakpoint(medium){
+                    height: 65%;
+                    margin-left: 25px;
+                }
+                @include breakpoint(small){
+                    height: 85%;
+                    margin-left: 25px;
+                }
+                @include breakpoint(narrow){
+                    width: 75%;
+                    height: 50%;
+                    margin-left: 0px;
+                }
+
+                h2 {
+                    font-size: 45px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 39.9px;
+                        font-family: 'Times New Roman', Times, serif;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 19.1px;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                }
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                    height: 15%;
+                    width: 30%;
+                    background-color: #403531;
+                    color: white;
+
+                    @include breakpoint(large) {
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                    @include breakpoint(small){
+                        width: 65%;
+                        height: 10%;
+                    }
+                }
+            }
+
+
+        }
+
+        #asharSeven {
+            // border: 2px solid red;
+            height: 18%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include breakpoint(large) {
+                height: 18.1%;
+                display: flex;
+                justify-content: space-between;
+            }
+            @include breakpoint(medium){
+                display: flex;
+                justify-content: space-between;
+            }
+            @include breakpoint(small){
+                display: flex;
+                justify-content: space-between;
+            }
+            @include breakpoint(narrow){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+
+            img {
+                height: 100%;
+                // border: 2px solid purple;
+
+                @include breakpoint(large) {
+                    height: 95%;
+                    width: 45%;
+                }
+                @include breakpoint(small){
+                    width: 55%;
+                }
+                @include breakpoint(narrow){
+                    width: 100%;
+                    height: 60%;
+                }
+            }
+
+            #textSeven {
+                // border: 2px solid purple;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 35%;
+                width: 35%;
+
+                @include breakpoint(large) {
+                    height: 45%;
+                    width: 40%;
+                    margin-right: 25px;
+                }
+                @include breakpoint(medium){
+                    height: 50%;
+                    margin-right: 25px;
+                }
+                @include breakpoint(small){
+                    height: 65%;
+                    width: 30%;
+                    margin-right: 25px;
+                }
+                @include breakpoint(narrow){
+                    width: 85%;
+                    height: 35%;
+                }
+
+                h2 {
+                    font-size: 45px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 39.9px;
+                        font-family: 'Times New Roman', Times, serif;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-size: 19.1px;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                }
+
+                a {
+                    font-size: 20px;
+                    color: #403531;
+
+                    @include breakpoint(large) {
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                }
+            }
+        }
+    }
+}
