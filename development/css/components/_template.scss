@@ -1,0 +1,433 @@
+// $(funtion(){
+// 	var wheight = $(window).height();
+// 	$('.fullheight').css('height', wheight);
+// 	$(window).resize(funtion() {
+// 		var wheight = $(window).height();
+//	 	$('.fullheight').css('height', wheight);
+// 	})
+// });
+
+// @include animation(scale 1.0s ease-in, slide 2.0s ease);
+// @include transition(all 0.4s ease-in-out);
+// @include horizontal-list; //This will act as float-left for navigation or ul list.
+// list-style: square; // this will place square bullet to all li text.
+// &::after {content: '\000a0'; display: block;} // If you wanna display background image without content on it. "\000a0 is same as &nbsp;".
+// @extend %btn; // this will include .btn class rules to another class rules or %-hides this class but include in another class.
+// nav { header & {background-color: $red} }; //if you have one navigation in header & footer and you want to change background color in header. insert this inside nav tag.
+// @include transform(skew(40deg, 0deg)); //parallelogram
+// @include box-shadow(#000000 0px 0px 0px inset); // Box shadow inner
+// @include box-shadow(#000000 0px 0px 0px); // box shadow outer
+
+// img {
+//    width:auto;
+//    max-width:100%;
+//    height:auto !important;
+// }
+
+// @include background-image(linear-gradient(top, darken($red, 20), $green)); // this will make background top=red to bottom=green.
+// @include backImage('../images/background/me.png', to right, 0, 0, 65% top); // this will move image 65% from top.
+// @include backImage('..//images/background/me.png', 300px, top center); // this will resize image to 300px from top to center.
+
+// @extend .container; //This will include one class into another.
+// @include container(); //This will include default container approx 90%.
+// @include container(70%); //This container will follow your requirements.
+// @include pad(7,1); //This will give 7 column left and 1 column space right side.
+
+// @include span(4); //This will take 4 coloumns to the left
+// @include span(8 at 4 of 12); //This will place most right to the coloumns
+// @include span(6 of 12 0); //This will place 2 coloumns with 0 gutter.
+// @include span(4 of 12); //This will take 4 coloumns to the left
+// @include span(8 omega of 12); //This will place most right to the coloumns
+
+// rgba( $base-color, .7 ) //This adds transparency to a color.
+// transparentize( $yellow, .8 ) //This adds transparency to a color.
+// opacify( $yellow, .8 ) //This oppose transparency to a color.
+
+// Create buttons with different background on the fly.
+//*************************************************************************************************************
+// $color-headlines: $blue, $purple, $green, $red, $orange, $yellow;
+// h1,h2,h3,h4,h5,h6 { font-family: $font-highlight; }
+// @for $item from 1 through length($color-headlines) {
+//   h#{$item} {
+//     color: nth($color-headlines, $item);
+//   }
+// }
+//*******************************************************
+// $color-btn-names: 'default', 'hot', 'cool';
+// $color-btn-values: $color-main, $red, $blue;  
+// @each $name in $color-btn-names {
+//   $i: index($color-btn-names, $name);
+//   .btn-#{$name} {
+//     @extend %btn;
+//     background-color: nth($color-btn-values, $i);;
+// }
+//*******************************************************
+// %btn {
+//   font-size: 2rem;
+//   color: $red;
+// }
+// $color-btns: (
+//   default: $color-main,
+//   hot: $red,
+//   cool: $blue,
+//   awesome: $purple
+// );
+// @each $key, $value in $color-btns {
+//   .btn-#{$key} {
+//     @extend %btn;
+//     background-color: $value;
+//   }
+// }
+//*************************************************************************************************************
+
+// you can use one parameter from roundness.
+//*************************************************************************************************************
+// $roundness: 20px 0 15px 0;
+// border-radius: nth($roundness, 3);
+//*************************************************************************************************************
+
+// display picture gallery and limit the picture quantity in a line.
+//*************************************************************************************************************
+// @include gallery(1 of 5); //This is for picture gallery.
+// display inline-block;
+//******************************************************
+// @mixin imagegrid($qty, $margin) {
+//   width: ((100% - (($qty - 1) * $margin))/$qty);
+//   &:nth-child(n) {
+//     margin-right: $margin;
+//     margin-bottom: $margin;
+//   }
+//   &:nth-child(#{qty}n) {
+//     margin-right: 0;
+//     margin-bottom: 0;
+//   }
+// }
+
+// .grid {
+//   @include clearfix;
+//   .item {
+//     float: left;
+//     @include imagegrid(5, 1%);
+//   }
+//   img {
+//     display: block;
+//     border-radius: 10px;
+//     max-width: 100%;
+//   }
+// }
+//*************************************************************************************************************
+
+// display text at 0 bottom on top of the background image.
+//*************************************************************************************************************
+// .image {
+// 	position: relative;
+
+// 	.content {
+// 		position: absolute;
+// 		bottom: 0;
+// 	}
+// }
+//******************************************************
+// display: table-cell;
+// vertical-align: bottom;
+//***************************************************
+// Ghost Vertical Align
+//*************************************************************************************************************
+// This is a slightly modified version of a  CSS-Tricks method  for vertically centering elements with a dynamic size. Works beautifully and doesnÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö¼┬½Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬╝Ôö¼┬¢Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØÔö£├ÂÔö£ÔûôÔö£├┐├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£Ôòæ├ö├Â┬úÔö£├é├ö├Â┬ú├ö├╗├┤├ö├Â┬úÔö¼┬¼├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö¼┬½├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝├ö├▓├ÿÔö£├ÂÔö£├éÔö¼├║Ôö£├ÂÔö£ÔûôÔö£┬¬Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬╝Ôö¼┬óÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö¼┬½Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬╝Ôö¼┬¢Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØÔö£├ÂÔö£ÔûôÔö£├┐├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£Ôòæ├ö├Â┬úÔö£├é├ö├Â┬ú├ö├╗├┤├ö├Â┬úÔö¼┬¼├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö¼┬½├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝├ö├▓├ÿÔö£├ÂÔö£├éÔö¼├║Ôö£├ÂÔö£ÔûôÔö£┬¬Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØÔö£├ÂÔö£ÔûôÔö£├┐Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║Ôö£├ÂÔö£ÔòùÔö£ÔöñÔö£├ÂÔö£├éÔö¼├║├ö├Â┬╝Ôö¼┬╝Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö¼┬½Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬╝Ôö¼┬¢Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØÔö£├ÂÔö£ÔûôÔö£├┐├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£Ôòæ├ö├Â┬úÔö£├é├ö├Â┬ú├ö├╗├┤├ö├Â┬úÔö¼┬¼├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö¼┬½├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝├ö├▓├ÿÔö£├ÂÔö£├éÔö¼├║Ôö£├ÂÔö£ÔûôÔö£┬¬├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£Ôòæ├ö├Â┬úÔö£├é├ö├Â┬ú├ö├▓├╣├ö├Â┬ú├ö├Â├▒├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£Ôòæ├ö├Â┬úÔö£├é├ö├Â┬ú├ö├╗├┤├ö├Â┬ú├ö├▓├ªt require an extra, non-semantic HTML element.
+// @mixin ghostVerticalAlign(){
+//   &:before {
+//     content: '';
+//     display: inline-block;
+//     vertical-align: middle;
+//     height: 100%; width: .1px;
+//   }
+// }
+//*************************************************************************************************************
+
+// display content middle of the page horizontally and vertically.
+//*************************************************************************************************************
+// @include display-flex();
+// @include align-items(center);
+// @include justify-content(center);
+//*************************************************************************************************************
+
+// Features Operators to select background color.
+//*************************************************************************************************************
+// $border-thickness : 1px;
+// $thicker : $border-thickness * 5;
+// .sidebar {
+//   @if (border-thickness <=1) {
+//     background-color: red;
+//   } @else {
+//     background-color: green;
+//   }
+// }
+//*************************************************************************************************************
+
+// FULL HEIGHT WINDOWS as per Device.
+//*************************************************************************************************************
+//jqloader.js
+//var $ = require('jquery');
+//var jQuery = $;
+
+// $(function() {
+// 	var wheight = $(window).height(); // get height of the window
+// 	$('.fullheight').css('height', wheight); // find .fullheight class and change height-value to wheight-value.
+// });
+
+// You don't need it unless you want to proof someone by resizing windows.
+// $(window).resize(function() {
+// 	var wheight = $(window).height(); // get height of the window
+// 	$('.fullheight').css('height', wheight); // find .fullheight class and change height-value to wheight-value.
+// });
+//*************************************************************************************************************
+
+// Provides mixins for the CSS3 User Interface module.
+//*************************************************************************************************************
+// This file can be imported using: @import "compass/css3/user-interface"
+// <form action='' method='get'>
+//   <label for='input'>Input</label>
+//   <input name='input' placeholder='Type somethingÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö¼┬½Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬╝Ôö¼┬¢Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØÔö£├ÂÔö£ÔûôÔö£├┐├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£Ôòæ├ö├Â┬úÔö£├é├ö├Â┬ú├ö├╗├┤├ö├Â┬úÔö¼┬¼├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö¼┬½├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝├ö├▓├ÿÔö£├ÂÔö£├éÔö¼├║Ôö£├ÂÔö£ÔûôÔö£┬¬Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬╝Ôö¼┬óÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö¼┬½Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬╝Ôö¼┬¢Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØÔö£├ÂÔö£ÔûôÔö£├┐├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£Ôòæ├ö├Â┬úÔö£├é├ö├Â┬ú├ö├╗├┤├ö├Â┬úÔö¼┬¼├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö¼┬½├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝├ö├▓├ÿÔö£├ÂÔö£├éÔö¼├║Ôö£├ÂÔö£ÔûôÔö£┬¬Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØÔö£├ÂÔö£ÔûôÔö£├┐Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║Ôö£├ÂÔö£ÔòùÔö£ÔöñÔö£├ÂÔö£├éÔö¼├║├ö├Â┬╝Ôö¼┬╝Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö¼┬½Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØ├ö├Â┬ú├ö├▓├ª├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬╝Ôö¼┬¢Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØÔö£├ÂÔö£ÔûôÔö£├┐Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║Ôö£├ÂÔö£ÔòùÔö£ÔöñÔö£├ÂÔö£├éÔö¼├║├ö├Â┬ú├ö├Â├ë├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝Ôö£ÔòæÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö¼┬½├ö├Â┬úÔö£├é├ö├Â┬úÔö£├®├ö├Â┬╝├ö├▓├ÿ├ö├Â┬úÔö£├é├ö├Â┬ú├ö├╗├┤├ö├Â┬úÔö£ÔöÉÔö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£┬«Ôö£├ÂÔö£├éÔö¼ÔòØÔö£├ÂÔö£ÔûôÔö£├┐Ôö£├ÂÔö£├éÔö¼├║├ö├Â┬úÔö£├®Ôö£├ÂÔö£├éÔö¼├║Ôö£├ÂÔö£ÔòùÔö£ÔöñÔö£├ÂÔö£├éÔö¼├║├ö├Â┬ú├ö├Â├ë' type='text'>
+// </form>
+// @import "compass/css3/user-interface";
+// input[type="text"] {
+//   @include input-placeholder {
+//     color: #bfbfbf;
+//     font-style: italic;
+//   }
+// }
+//*************************************************************************************************************
+
+// Box-shadow
+//*************************************************************************************************************
+// <div class='box-shadow-example'>
+//   <div id='box-shadow-default'></div>
+//   <div id='box-shadow-custom'></div>
+//   <div id='box-shadow-custom-multiple'></div>
+// </div>
+// @import "compass/css3";
+// .box-shadow-example div {
+//   width: 40px;
+//   height: 40px;
+//   background: #eeeeee;
+//   margin: 20px;
+//   float: left;
+// }
+// // Default single box shadow
+// #box-shadow-default {
+//   @include single-box-shadow;
+// }
+// // Box shadow with custom settings
+// #box-shadow-custom {
+//   @include box-shadow(red 2px 2px 10px);
+// }
+// #box-shadow-custom-multiple {
+//   @include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
+// }
+//*************************************************************************************************************
+
+// Text-shadow
+//*************************************************************************************************************
+// <div>this text has no shadow</div>
+// <div class='has-single-shadow'>this text has a shadow</div>
+// <div class='has-custom-shadow'>this text has a custom shadow</div>
+// $default-text-shadow-color: rgba(red, 0.6);
+// $default-text-shadow-blur: 3px;
+// $default-text-shadow-v-offset: 1px;
+
+// @import "compass/css3";
+
+// // Uses defaults set before the import above
+// .has-single-shadow {
+//   @include single-text-shadow;
+// }
+
+// // Can output up to ten text shadows
+// .has-custom-shadow {
+//   @include text-shadow(rgba(blue, 0.2) 1px 1px 0, rgba(blue, 0.2) 2px 2px 0, rgba(blue, 0.2) 3px 3px 0);
+// }
+//*************************************************************************************************************
+
+// table scaffolding
+//*************************************************************************************************************
+// <div class='example'>
+//   <table cellspacing='0'>
+//     <thead>
+//       <tr class='odd'>
+//         <th>Title</th>
+//         <th>One</th>
+//         <th>Two</th>
+//         <th>Three</th>
+//         <th>Four</th>
+//         <th>Row Total</th>
+//       </tr>
+//     </thead>
+//     <tbody>
+//       <tr class='even'>
+//         <th>Single</th>
+//         <td class='numeric'>1.0</td>
+//         <td class='numeric'>2.0</td>
+//         <td class='numeric'>3.0</td>
+//         <td class='numeric'>4.0</td>
+//         <td class='numeric'>10.0</td>
+//       </tr>
+//       <tr class='odd'>
+//         <th>Tens</th>
+//         <td class='numeric'>10.0</td>
+//         <td class='numeric'>20.0</td>
+//         <td class='numeric'>30.0</td>
+//         <td class='numeric'>40.0</td>
+//         <td class='numeric'>100.0</td>
+//       </tr>
+//     </tbody>
+//     <tfoot>
+//       <tr class='even'>
+//         <th>Total</th>
+//         <td class='numeric'>11.0</td>
+//         <td class='numeric'>22.0</td>
+//         <td class='numeric'>33.0</td>
+//         <td class='numeric'>44.0</td>
+//         <td class='numeric'>110.0</td>
+//       </tr>
+//     </tfoot>
+//   </table>
+// </div>
+// @import "compass/utilities/tables/scaffolding"; 
+// .example {
+//   table {
+//     @include table-scaffolding;
+//   }
+// }
+//*************************************************************************************************************
+
+// with-browser-support-debugging
+//*************************************************************************************************************
+// Enable browser support debugging within the content block. Or you can enable it for the whole stylesheet by setting $debug-browser-support to true.
+// @mixin with-browser-support-debugging {
+//   $current-status: $debug-browser-support;
+//   $debug-browser-support: true !global;
+//   @content;
+//   $debug-browser-support: $current-status !global;
+// }
+//*************************************************************************************************************
+
+// Compass Sticky Footer Example
+//*************************************************************************************************************
+// @import "compass/reset.scss";
+// @import "compass/layout.scss";
+// @include sticky-footer(72px, "#layout", "#layout_footer", "#footer");
+// #header {
+//   background: #999999;
+//   height: 72px;
+// }
+// #footer {
+//   background: #cccccc;
+// }
+// .example {
+//   height: 500px;
+//   border: 3px solid red;
+//   p {
+//     margin: 1em 0.5em;
+//   }
+// }
+// <div class='example'>
+//   <div id='layout'>
+//     <div id='header'>
+//       <h1>Sticky Footer Example</h1>
+//     </div>
+//     <p>
+//       This is the main content area.
+//     </p>
+//     <p>
+//       In this example you should pretend that the red box
+//       is actually the browser window.
+//     </p>
+//     <p>
+//       Because, being a contrived example, it's not actually sticking
+//       to the bottom of the page.
+//     </p>
+//     <div id='layout_footer'></div>
+//   </div>
+//   <div id='footer'>
+//     This is the footer area.
+//   </div>
+// </div>
+
+// *************************************************************************************************************************
+
+//   $(document).ready(function(){
+//       $(window).resize(function(){
+//           var footerHeight = $('.footer').outerHeight();
+//           var stickFooterPush = $('.push').height(footerHeight);
+
+//           $('.wrapper').css({'marginBottom':'-' + footerHeight + 'px'});
+//         });
+
+//         $(window).resize();
+//       });
+
+//   * {
+//   -moz-box-sizing: border-box;
+//   -webkit-box-sizing: border-box;
+//   box-sizing: border-box;
+// }
+
+// body {
+//   line-height: 1.2;
+// }
+
+// /* required for sticky footer */
+
+// html, body {
+//   height: 100%;
+// }
+
+// .wrapper {
+//   min-height: 100%;
+//   height: auto !important;
+//   height: 100%;
+// }
+
+// /* end required for sticky footer */
+
+// .header, .header a, .footer {
+//   background: #000;
+//   color: #fff;
+// }
+
+// .nav {
+//   list-style: none;
+// }
+
+// .nav li {
+//   display: inline-block;
+// }
+
+// <div class="wrapper">
+//     <header class="header">
+//         <h1>Some logo</h1>
+//        <ul class="nav">
+//           <li><a href="">Menu Links</a></li>
+//           <li><a href="">Menu Links</a></li>
+//           <li><a href="">Menu Links</a></li>
+//           <li><a href="">Menu Links</a></li>
+//        </ul>
+//     </header>
+
+//     <main class="main">
+//         <br>
+//         <p>This would be your main content area</p>
+//         <br>
+//     </main>
+
+//     <div class="push"></div>
+
+// </div> <!-- /wrapper  -->
+
+// <footer class="footer">
+//     <p>Write some footery stuff here</p>
+//     <p>The kind that no ones cares about :D</p>
+//     <p>The kind of text that is so damn long that your footer height changes on a smaller screen.</p>
+// </footer>
+
+//*************************************************************************************************************

@@ -1,0 +1,636 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+}
+
+main {
+    height: 285vh;
+    width: 100vw;
+    background-color: #1F1F1F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(small){
+        height: 415vh;
+    }
+
+
+    #center {
+        // border: 2px solid green;
+        width: 85%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        @include breakpoint(large){
+            display: flex;
+            justify-content: space-between;
+        }
+        @include breakpoint(medium){
+            width: 100%;
+        }
+        @include breakpoint(small){
+            height: 100%;
+        }
+
+        #asharOne {
+            // border: 2px solid red;
+            height: 10%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            @include breakpoint(medium){
+                width: 95%;
+            }
+            @include breakpoint(small){
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 35px;
+                color: orange;
+                font-family: 'Times New Roman', Times, serif;
+                @include breakpoint(medium){
+                    font-size: 30px;
+                }
+                @include breakpoint(narrow){
+                    font-size: 25px;
+                }
+            }
+
+            p {
+                font-size: 25px;
+                color: whitesmoke;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                @include breakpoint(medium){
+                    font-size: 20px;
+                }
+                @include breakpoint(small){
+                    font-size: 18px;
+                }
+                @include breakpoint(narrow){
+                    font-size: 18px;
+                }
+            }
+        }
+
+        #asharTwo {
+            // border: 2px solid blue;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 15%;
+            @include breakpoint(large){
+                width: 115%;
+                height: 15%;
+                display: flex;
+                justify-content: space-evenly;
+            }
+            @include breakpoint(medium){
+                width: 100%;
+                height: 15%;
+            }
+            @include breakpoint(small){
+                height: 25%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @include breakpoint(narrow){
+                width: 100%;
+            }
+
+            li {
+                // border: 2px solid red;
+                width: 15%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                @include breakpoint(large){
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+                @include breakpoint(medium){
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                @include breakpoint(small){
+                    width: 80%;
+                    height: 90%;
+                    margin-left: 20px;
+                }
+                @include breakpoint(narrow){
+                    height: 95%;
+                    width: 85%;
+                    margin-left: 10px;
+                }
+                
+
+                img {
+                    width: 90%;
+                    height: 75%;
+                    border-radius: 15px;
+                    @include breakpoint(large){
+                        width: 100%;
+                        height: 75%;
+                        border-radius: 15px;
+                    }
+                    @include breakpoint(medium){
+                        width: 100%;
+                        height:70% ;
+                    }
+                    @include breakpoint(small){
+                        height: 85%;
+                        width: 95%;
+                    }
+                    @include breakpoint(narrow){
+                        height: 70%;
+                        width: 100%;
+                    }
+                }
+
+                p {
+                    color: whitesmoke;
+                    font-size: 17px;
+                    text-align: center;
+                    @include breakpoint(large){
+                        font-size: 15px;
+                        text-align: center;
+                    }
+                }
+            }
+            
+        }
+
+        #asharThree {
+            // border: 2px solid red;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 15%;
+            @include breakpoint(large){
+                width: 115%;
+                height: 15%;
+                display: flex;
+                justify-content: space-evenly;
+            }
+            @include breakpoint(medium){
+                width: 100%;
+                height: 15%;
+            }
+            @include breakpoint(small){
+                height: 25%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @include breakpoint(narrow){
+                width: 100%;
+            }
+
+            li {
+                // border: 2px solid blue;
+                list-style-type: none;
+                width: 15%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                @include breakpoint(large){
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+                @include breakpoint(medium){
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                @include breakpoint(small){
+                    width: 80%;
+                    height: 90%;
+                    margin-left: 20px;
+                }
+                @include breakpoint(narrow){
+                    height: 95%;
+                    width: 85%;
+                    margin-left: 10px;
+                }
+                
+
+                img {
+                    width: 90%;
+                    height: 75%;
+                    border-radius: 15px;
+                    @include breakpoint(large){
+                        width: 100%;
+                        height: 75%;
+                        border-radius: 15px;
+                    }
+                    @include breakpoint(medium){
+                        width: 100%;
+                        height:70% ;
+                    }
+                    @include breakpoint(small){
+                        height: 85%;
+                        width: 95%;
+                    }
+                    @include breakpoint(narrow){
+                        height: 70%;
+                        width: 100%;
+                    }
+                }
+                p {
+                    color: whitesmoke;
+                    font-size: 18px;
+                    @include breakpoint(large){
+                        font-size: 15px;
+                    }
+                    @include breakpoint(medium){
+                        text-align: center;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+        #asharFour {
+            // border: 2px solid green;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 15%;
+            @include breakpoint(large){
+                width: 115%;
+                height: 15%;
+                display: flex;
+                justify-content: space-evenly;
+            }
+            @include breakpoint(medium){
+                width: 100%;
+                height: 15%;
+            }
+            @include breakpoint(small){
+                height: 25%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @include breakpoint(narrow){
+                width: 100%;
+            }
+
+            li {
+                // border: 2px solid red;
+                list-style-type: none;
+                width: 15%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                @include breakpoint(large){
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+                @include breakpoint(medium){
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                @include breakpoint(small){
+                    width: 80%;
+                    height: 90%;
+                    margin-left: 20px;
+                }
+                @include breakpoint(narrow){
+                    height: 95%;
+                    width: 85%;
+                    margin-left: 10px;
+                }
+              
+
+                img {
+                    width: 90%;
+                    height: 75%;
+                    border-radius: 15px;
+                    @include breakpoint(large){
+                        width: 100%;
+                        height: 75%;
+                        border-radius: 15px;
+                    }
+                    @include breakpoint(medium){
+                        width: 100%;
+                        height:70% ;
+                    }
+                    @include breakpoint(small){
+                        height: 85%;
+                        width: 95%;
+                    }
+                    @include breakpoint(narrow){
+                        height: 70%;
+                        width: 100%;
+                    }
+                }
+                p {
+                    color: whitesmoke;
+                    font-size: 17px;
+                    @include breakpoint(large){
+                        font-size: 15px;
+                    }
+                    @include breakpoint(medium){
+                        text-align: center;
+                        font-size: 13px;
+                    }
+                    @include breakpoint(small){
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+        #asharFive {
+            // border: 2px solid blue;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 15%;
+            @include breakpoint(large){
+                width: 115%;
+                height: 15%;
+                display: flex;
+                justify-content: space-evenly;
+            }
+            @include breakpoint(medium){
+                width: 100%;
+                height: 15%;
+            }
+            @include breakpoint(small){
+                height: 25%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @include breakpoint(narrow){
+                width: 100%;
+            }
+
+            li {
+                // border: 2px solid yellow;
+                list-style-type: none;
+                width: 15%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                @include breakpoint(large){
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+                @include breakpoint(medium){
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                @include breakpoint(small){
+                    width: 80%;
+                    height: 90%;
+                    margin-left: 20px;
+                }
+                @include breakpoint(narrow){
+                    height: 95%;
+                    width: 85%;
+                    margin-left: 10px;
+                }
+
+                
+                img {
+                    width: 90%;
+                    height: 75%;
+                    border-radius: 15px;
+                    @include breakpoint(large){
+                        width: 100%;
+                        height: 75%;
+                        border-radius: 15px;
+                    }
+                    @include breakpoint(medium){
+                        width: 100%;
+                        height:70% ;
+                    }
+                    @include breakpoint(small){
+                        height: 85%;
+                        width: 95%;
+                    }
+                    @include breakpoint(narrow){
+                        height: 70%;
+                        width: 100%;
+                    }
+                }
+                p {
+                    color: whitesmoke;
+                    font-size: 17px;
+                    @include breakpoint(large){
+                        font-size: 15px;
+                    }
+                    @include breakpoint(medium){
+                        text-align: center;
+                        font-size: 13.5px;
+                    }
+                    @include breakpoint(small){
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+        #asharSix {
+            // border: 2px solid yellow;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 15%;
+            @include breakpoint(large){
+                width: 115%;
+                height: 15%;
+                display: flex;
+                justify-content: space-evenly;
+            }
+            @include breakpoint(medium){
+                width: 100%;
+                height: 15%;
+            }
+            @include breakpoint(small){
+                height: 25%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @include breakpoint(narrow){
+                width: 100%;
+            }
+
+            li {
+                // border: 2px solid greenyellow;
+                list-style-type: none;
+                width: 15%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                @include breakpoint(large){
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+                @include breakpoint(medium){
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                @include breakpoint(small){
+                    width: 80%;
+                    height: 90%;
+                    margin-left: 20px;
+                }
+                @include breakpoint(narrow){
+                    height: 95%;
+                    width: 85%;
+                    margin-left: 10px;
+                }
+
+                img {
+                    width: 90%;
+                    height: 75%;
+                    border-radius: 15px;
+                    @include breakpoint(large){
+                        width: 100%;
+                        height: 75%;
+                        border-radius: 15px;
+                    }
+                    @include breakpoint(medium){
+                        width: 100%;
+                        height:70% ;
+                    }
+                    @include breakpoint(small){
+                        height: 85%;
+                        width: 95%;
+                    }
+                    @include breakpoint(narrow){
+                        height: 70%;
+                        width: 100%;
+                    }
+                }
+                p {
+                    color: whitesmoke;
+                    font-size: 17px;
+                    @include breakpoint(large){
+                        font-size: 15px;
+                    }
+                    @include breakpoint(medium){
+                        text-align: center;
+                        font-size: 13.5px;
+                    }
+                }
+            }
+        }
+
+        #asharSeven {
+            //  border: 2px solid blue;
+             display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 15%;
+            @include breakpoint(large){
+                width: 115%;
+                height: 15%;
+                display: flex;
+                justify-content: space-evenly;
+            }
+            @include breakpoint(medium){
+                width: 100%;
+                height: 15%;
+            }
+            @include breakpoint(small){
+                height: 25%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @include breakpoint(narrow){
+                width: 100%;
+            }
+            
+
+            li {
+                // border: 2px solid red;
+                list-style-type: none;
+                width: 15%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                @include breakpoint(large){
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+                @include breakpoint(medium){
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                @include breakpoint(small){
+                    width: 80%;
+                    height: 90%;
+                    margin-left: 20px;
+                }
+                @include breakpoint(narrow){
+                    height: 95%;
+                    width: 85%;
+                    margin-left: 10px;
+                }
+
+                img {
+                    width: 90%;
+                    height: 75%;
+                    border-radius: 15px;
+                    @include breakpoint(large){
+                        width: 100%;
+                        height: 75%;
+                        border-radius: 15px;
+                    }
+                    @include breakpoint(medium){
+                        width: 100%;
+                        height:70% ;
+                    }
+                    @include breakpoint(small){
+                        height: 85%;
+                        width: 95%;
+                    }
+                    @include breakpoint(narrow){
+                        height: 70%;
+                        width: 100%;
+                    }
+                }
+                p {
+                    color: whitesmoke;
+                    font-size: 17px;
+                    @include breakpoint(large){
+                        font-size: 15px;
+                    }
+                    @include breakpoint(medium){
+                        text-align: center;
+                        font-size: 13.5px;
+                    }
+                }
+            }
+        }
+    }
+}
