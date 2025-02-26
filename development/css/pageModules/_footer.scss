@@ -1,0 +1,89 @@
+// * {
+//     margin: 0px;
+//     padding: 0px;
+//     font-family: Arial;
+// }
+
+// footer {
+//     // border: 5px solid blue;
+//     // height: 10vw;
+//     width: 100vw;
+
+//     @include breakpoint(large){
+//         height: 5%;
+//     }
+
+//     @include breakpoint(medium) {
+//         height: 5vw;
+//     }
+
+//     @include breakpoint(small) {
+//         height: 5vw;
+//     }
+
+//     #partThirteen {
+//         // border: 3px solid green;
+//         height: 100%;
+//         width: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+
+//         #centerThirteen {
+//             // border: 2px solid orange;
+//             width: 55%;
+//             height: 75%;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: space-between;
+
+//             @include breakpoint(large) {
+//                 width: 75%;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//             }
+
+//             @include breakpoint(small) {
+//                 width: 95%;
+//             }
+
+           
+//             #kidTwo {
+//                 // border: 2px solid red;
+//                 height: 10%;
+//                 display: flex;
+//                 flex-direction: row;
+//                 align-items: center;
+//                 justify-content: space-evenly;
+
+//                 @include breakpoint(large) {
+//                     width: 65%;
+//                 }
+
+//                 @include breakpoint(medium) {
+//                     width: 85%;
+//                 }
+
+//                 @include breakpoint(small) {
+//                     width: 100%;
+//                 }
+
+//                 li {
+//                     list-style-type: none;
+
+//                     a {
+//                         font-size: 18px;
+//                         text-decoration: none;
+//                         color: #393C41;
+
+//                         @include breakpoint(large) {
+//                             font-size: 14px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+
+//     }
+// }
