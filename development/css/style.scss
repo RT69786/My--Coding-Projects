@@ -1,0 +1,20 @@
+@import "components/variables";
+@import "components/mixins";
+@import "components/base";
+
+
+
+@import "pageModules/header";
+@import "pageModules/nav";
+@import "pageModules/main";
+@import "pageModules/footer";
+
+
+
+@font-face {  
+    font-family: 'Sofia Pro'; // Name of the font  
+    src: url('./fonts/sofia_pro_bold_az-webfont.woff2') format('woff2'), // Correct path to the font files  
+         url('./fonts/sofia_pro_bold_az-webfont.woff') format('woff');   // Include .woff format  
+    font-weight: bold; // Specify font-weight  
+    font-style: bold;  // Specify font-style  
+}  

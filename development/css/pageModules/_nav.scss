@@ -1,0 +1,164 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Sofia Pro";
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+
+  #container {
+    // border: 1px solid red;
+    width: 1440px;
+
+    Header {
+      // border: 2px solid blue;
+      height: 90vh;
+      width: 100%;
+      position: relative;
+
+      #navBar {
+        // border: 2px solid green;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+
+        #logo {
+          // border: 2px solid red;
+          img {
+            width: 105%;
+          }
+        }
+
+        #navLinks {
+          // border: 2px solid red;
+          display: flex;
+          flex-direction: row;
+          width: 55%;
+          height: 45%;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          li {
+            list-style-type: none;
+
+            a {
+              text-decoration: none;
+              color: #191919;
+              font-size: 18px;
+            }
+          }
+        }
+
+        #downloadButton {
+          //   border: 2px solid red;
+          //   padding-right:20px ;
+          button {
+            border-radius: 100px;
+            border: none;
+            background-color: #f54748;
+            height: fit-content;
+            padding: 10px 20px; // 10px indicate up and down and 20px indicate left and right padding
+
+            a {
+              text-decoration: none;
+              color: white;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+
+      #heading1 {
+        // border: 2px solid red;
+        padding-top: 155px;
+        #bigHeadng {
+          list-style-type: none;
+          h1 {
+            font-size: 55px;
+            width: 600px;
+            span {
+              color: #f54748;
+            }
+            #yellow {
+              color: #fdc55e;
+            }
+          }
+          p {
+            padding-top: 30px;
+            font-size: 24px;
+            width: 517px;
+          }
+          #anotherDownloadButton {
+            //   border: 2px solid red;
+            padding: 27px 0px;
+            button {
+              border-radius: 100px;
+              border: none;
+              background-color: #f54748;
+              height: fit-content;
+              padding: 10px 20px; // 10px indicate up and down and 20px indicate left and right padding
+
+              a {
+                text-decoration: none;
+                color: white;
+                font-size: 18px;
+              }
+            }
+          }
+        } //bigHeading
+      } //heading1
+
+      #downArrow {
+        position: absolute;
+        top: 65px;
+        left: 160px;
+        width: 145px;
+      }
+
+      #shadeAngle {
+        position: absolute;
+        top: 0px;
+      }
+
+      #beautifulGirl {
+        position: absolute;
+        left: 680px;
+        top: 130px;
+        width: 695px;
+      }
+
+      #upArrow {
+        position: absolute;
+        left: 1240px;
+        top: 125px;
+      }
+
+      #tallDesign {
+        position: absolute;
+        left: 1061px;
+        top: 5px;
+        z-index: -1;
+      }
+
+      #redScrapLine {
+        position: absolute;
+        left: 270px;
+        top: 370px;
+      }
+
+      #dotArrowDown {
+        position: absolute;
+        top: 605px;
+        left: 55px;
+      }
+    } //Header
+  } //container
+} //html, body
