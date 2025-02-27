@@ -16,4 +16,4 @@ Additionally, I have more projects that are not included here but would be happy
 Please let me know if you have any questions or would like to discuss my projects in further detail. Thank you for your consideration!
 
 Best,
-Ashar Hamid
+Ashar 
