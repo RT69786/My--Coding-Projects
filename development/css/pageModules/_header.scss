@@ -1,0 +1,218 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  // font-family:;
+}
+
+header {
+  // border: 2px solid skyblue;
+  height: 100vh;
+  background-color: #14092a;
+  @include breakpoint (medium){
+    height: 85vh;
+  }
+  #heroSection {
+    // border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    #forCenter {
+      // border: 2px solid red;
+      padding: 160px 0px;
+      max-width: 1400px;
+      width: 100%;
+      @include breakpoint(large) {
+        padding: 105px 70px;
+      }
+      @include breakpoint (medium){
+        padding: 75px 35px;
+      }
+      @include breakpoint (narrow){
+        padding: 30px 20px;
+      }
+
+      #heroText {
+        // border: 2px solid green;
+        display: flex;
+        flex-direction: column;
+        @include breakpoint(narrow){
+          align-items: center;
+        }
+
+        h1 {
+          font-size: 96px;
+          width: 900px;
+          color: #d1c0f1;
+          font-weight: 400;
+          @include breakpoint (medium){
+            font-size: 65px;
+            width: 600px;
+          }
+          @include breakpoint (narrow){
+            font-size: 45px;
+            width: 371px;
+            text-align: center;
+          }
+
+          span {
+            background: linear-gradient(to right, #ff52af, #9f53ff);
+            background-clip: text;
+            color: transparent;
+          }
+        }
+        p {
+          font-size: 16px;
+          color: #d1c0f1;
+          width: 335px;
+          padding: 45px 0px;
+          @include breakpoint(large) {
+            padding-left: 15px;
+          }
+          @include breakpoint (narrow){
+            width: 328px;
+            text-align: center;
+            padding: 25px 0px;
+            font-size: 13px;
+          }
+        }
+        button {
+          background: linear-gradient(to right, #ff52af, #9f53ff);
+          border-radius: 64px;
+          border: none;
+          color: #d1c0f1;
+          padding: 16px 28px;
+          font-size: 16px;
+          width: 214px;
+          @include breakpoint(large) {
+            margin-left: 10px;
+          }
+          @include breakpoint (medium){
+            width: 165px;
+            font-size: 13px;
+            padding: 13px 20px;
+          }
+          @include breakpoint (narrow){
+            width: 120px;
+            font-size: 11px;
+            padding: 10px 10px;
+          }
+        }
+
+        #heroStats {
+          // border: 2px solid yellow;
+          padding: 48px 0px;
+          width: 290px;
+          display: flex;
+          justify-content: space-between;
+          @include breakpoint(large) {
+            padding: 55px 10px;
+          }
+          @include breakpoint (narrow){
+            width: 250px;
+            padding: 35px 0px;
+          }
+
+          #statsOne {
+            // border: 2px solid lime;
+            width: 131px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3 {
+              color: #d1c0f1;
+              font-size: 60px;
+              font-weight: 400;
+
+              @include breakpoint (medium){
+                font-size: 55px;
+              }
+              @include breakpoint (narrow){
+                font-size: 28px;
+              }
+            }
+
+            h6 {
+              color: #d1c0f1;
+              font-size: 16px;
+              padding: 2px 0px;
+              font-weight: 400;
+              @include breakpoint (narrow){
+                font-size: 13px;
+              }
+            }
+          }
+          #statsTwo {
+            // border: 2px solid orange;
+            width: 131px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3 {
+              color: #d1c0f1;
+              font-size: 60px;
+              font-weight: 400;
+              @include breakpoint (medium){
+                font-size: 55px;
+              }
+              @include breakpoint (narrow){
+                font-size: 28px;
+              }
+            }
+
+            h6 {
+              color: #d1c0f1;
+              font-size: 16px;
+              padding: 2px 0px;
+              font-weight: 400;
+              @include breakpoint (narrow){
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #heroImage {
+      position: absolute;
+      top: 80px;
+      right: 310px;
+
+      @include breakpoint(large) {
+        top: 40px;
+        right: 100px;
+        width: 41%;
+      }
+      @include breakpoint (medium){
+        top: 40px;
+        right: 50px;
+        width: 45%;
+      }
+      @include breakpoint (narrow){
+        top: 350px;
+        right: 85px;
+        width: 60%;
+      }
+    }
+
+    #twoCircles {
+      position: absolute;
+      top: 380px;
+      left: 240px;
+      @include breakpoint(large) {
+        top: 330px;
+        left: 45px;
+      }
+      @include breakpoint (medium){
+        top: 230px;
+        left: 25px;
+      }
+      @include breakpoint (narrow){
+        display: none;
+      }
+    }
+  }
+}

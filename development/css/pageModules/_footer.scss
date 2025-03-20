@@ -1,0 +1,218 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  // font-family:;
+}
+
+footer {
+  #mainFooter {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+    background-color: #14092a;
+    @include breakpoint (medium){
+      padding: 0px 0px;
+    }
+
+    #forCenter {
+      // border: 2px solid green;
+      max-width: 1400px;
+      width: 100%;
+      @include breakpoint(large) {
+        padding: 10px 70px;
+      }
+      @include breakpoint (medium){
+        padding: 5px 35px;
+      }
+      
+
+      #fourBoxes {
+        // border: 2px solid blue;
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0px;
+        @include breakpoint(medium){
+          padding: 20px 0px;
+        }
+        @include breakpoint (narrow){
+          flex-direction: column;
+          padding: 0px 0px;
+        }
+
+        #logoParagraph {
+          // border: 2px solid yellow;
+          display: flex;
+          flex-direction: column;
+          width: 25%;
+          @include breakpoint (narrow){
+            width: 100%;
+          }
+
+          img {
+            width: 15%;
+            @include breakpoint (medium){
+              width: 30%;
+            }
+            @include breakpoint (narrow){
+              width: 13%;
+            }
+          }
+
+          p {
+            width: 270px;
+            margin-top: 40px;
+            color: #d1c0f1;
+            @include breakpoint (medium){
+              width: 100%;
+            }
+            @include breakpoint (narrow){
+              width: 50%;
+              margin-top: 20px;
+              font-size: 13px;
+            }
+          }
+        }
+
+        #threeDivs {
+          // border: 2px solid red;
+          display: flex;
+          justify-content: space-between;
+          width: 750px;
+          @include breakpoint (medium){
+            width: 560px;
+          }
+          @include breakpoint (narrow){
+            flex-direction: column;
+            width: 100%;
+          }
+
+          #oneDiv {
+            // border: 2px solid green;
+
+            h3 {
+              font-size: 24px;
+              color: white;
+              font-weight: 400;
+              @include breakpoint (narrow){
+                font-size: 20px;
+                padding-top: 10px;
+              }
+            }
+
+            p {
+              font-size: 16px;
+              color: #d1c0f1;
+              padding-top: 40px;
+              @include breakpoint (medium){
+                width: 75%;
+              }
+              @include breakpoint (narrow){
+                font-size: 13px;
+                padding-top: 15px;
+                padding-bottom: 10px;
+              }
+            }
+          }
+
+          #twoDiv {
+            // border: 2px solid blue;
+
+            h3 {
+              font-size: 24px;
+              color: white;
+              font-weight: 400;
+              @include breakpoint (narrow){
+                font-size: 20px;
+              }
+            }
+
+            p {
+              font-size: 16px;
+              color: #d1c0f1;
+              padding-top: 40px;
+              @include breakpoint (medium){
+                width: 75%;
+              }
+              @include breakpoint (narrow){
+                font-size: 13px;
+                padding-top: 15px;
+                padding-bottom: 10px;
+              }
+            }
+          }
+
+          #threeDiv {
+            // border: 2px solid yellow;
+
+            h3 {
+              font-size: 24px;
+              color: white;
+              font-weight: 400;
+              @include breakpoint (narrow){
+                font-size: 20px;
+              }
+            }
+
+            p {
+              font-size: 16px;
+              color: #d1c0f1;
+              padding-top: 40px;
+              @include breakpoint (medium){
+                width: 75%;
+              }
+              @include breakpoint (narrow){
+                font-size: 13px;
+                padding-top: 15px;
+                padding-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      #centerLine {
+        border-top: 1px solid #d1c0f1;
+      }
+
+      #twoMoreBoxes {
+        // border: 2px solid red;
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0px;
+        @include breakpoint (narrow){
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0px 0px;
+        }
+
+        #footerIcons {
+          @include breakpoint (narrow){
+            display: flex;
+            justify-content: center;
+          }
+          img {
+            width: 100%;
+            @include breakpoint (narrow){
+              width: 80%;
+              padding-bottom: 20px;
+              padding-top: 20px;
+            }
+          }
+        }
+
+        #oneSmallParagraph {
+          // border: 2px solid red;
+
+          p {
+            color: #d1c0f1;
+            @include breakpoint (narrow){
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
