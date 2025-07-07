@@ -1,0 +1,238 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  // font-family: Arial;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  #navbarOne {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #252525;
+
+    @include breakpoint(narrow) {
+      display: none;
+    }
+
+    #forCenter {
+      // border: 2px solid blue;
+      max-width: 1400px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .fourNavList {
+        // border: 2px solid green;
+        display: flex;
+        width: 25%;
+        @include breakpoint(large) {
+          padding-left: 20px;
+        }
+        @include breakpoint(medium) {
+          width: 30%;
+          padding-left: 10px;
+        }
+
+        li {
+          list-style: none;
+          display: flex;
+          align-items: center;
+
+          i {
+            padding-right: 10px;
+            font-size: 14px;
+            color: #b19703;
+            @include breakpoint(medium) {
+              padding-left: 10px;
+            }
+          }
+
+          p {
+            padding-right: 15px;
+            font-size: 13px;
+            color: white;
+            @include breakpoint(large) {
+              padding-left: 8px;
+            }
+
+            &:hover {
+              color: #b19703;
+            }
+          }
+        }
+      }
+
+      .sixNavList {
+        // border: 2px solid green;
+        display: flex;
+        width: 15%;
+        justify-content: space-between;
+        @include breakpoint(large) {
+          width: 17%;
+          padding-right: 20px;
+        }
+        @include breakpoint(medium) {
+          width: 25%;
+          padding-right: 0px;
+        }
+
+        li {
+          list-style: none;
+          display: flex;
+          align-items: center;
+
+          p {
+            padding-right: 12px;
+            color: white;
+            font-size: 13px;
+
+            &:hover {
+              color: #b19703;
+            }
+          }
+
+          i {
+            padding-right: 12px;
+            font-size: 14px;
+            color: #b19703;
+
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #navbarTwo {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+
+    #forCenter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      width: 100%;
+
+      #logo {
+        @include breakpoint(large) {
+          display: flex;
+          align-items: center;
+        }
+
+        @include breakpoint(medium) {
+          display: flex;
+          align-items: center;
+        }
+        img {
+          width: 25%;
+          padding: 5px 0px;
+
+          @include breakpoint(large) {
+            width: 20%;
+            padding-left: 30px;
+          }
+
+          @include breakpoint(medium) {
+            padding-left: 20px;
+          }
+
+          @include breakpoint (narrow){
+            width: 23%;
+            padding-left: 20px;
+          }
+        }
+      }
+
+      .fiveNavList {
+        // border: 2px solid red;
+        display: flex;
+        width: 35%;
+        align-items: center;
+        justify-content: space-evenly;
+        @include breakpoint(large) {
+          width: 45%;
+        }
+        @include breakpoint(medium) {
+          width: 55%;
+        }
+
+        @include breakpoint (narrow){
+          display: none;
+        }
+
+        li {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            font-size: 16px;
+            padding-left: 20px;
+            color: #b19703;
+
+            &:hover {
+              color: black;
+            }
+
+            @include breakpoint(large) {
+              padding-left: 0px;
+            }
+            @include breakpoint(medium) {
+              padding-left: 0px;
+              padding-right: 20px;
+            }
+          }
+
+          button {
+            background-color: #b19703;
+            border: none;
+            color: aliceblue;
+            text-align: center;
+            width: 105%;
+            padding: 10px 15px;
+            margin-left: 8px;
+
+            &:hover {
+              // color: #007bff;
+              border-radius: 25px;
+              transition: 0.3s;
+            }
+
+            @include breakpoint(large) {
+              margin-left: 0px;
+            }
+            @include breakpoint(medium) {
+              padding: 12px;
+              margin-left: 0px;
+            }
+          }
+        }
+      }
+
+      #menuIcon {
+        display: none;
+        @include breakpoint(narrow) {
+          display: block;
+
+          i {
+            color: #b19703;
+            font-size: 30px;
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
