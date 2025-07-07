@@ -1,0 +1,133 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  // font-family: Arial;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  nav {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    // padding: 0px 25px;
+    #forCenter {
+      //  border: 2px solid blue;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      width: 100%;
+      padding: 15px 0px;
+
+      .logo {
+        @include breakpoint(forMain){
+          width: 20%;
+        }
+
+        @include breakpoint(small){
+          width: 25%;
+        }
+
+        @include breakpoint(narrow){
+          width: 45%;
+        }
+        img {
+          width: 75%;
+          padding-left: 45px;
+
+          @include breakpoint(large){
+            width: 75%;
+          }
+
+          @include breakpoint(forMain){
+            width: 60%;
+            padding-left: 20px;
+          }
+
+          @include breakpoint(small){
+            width: 70%;
+          }
+        }
+      }
+
+      .navLinks {
+        // border: 2px solid green;
+        display: flex;
+        justify-content: space-between;
+        width: 25%;
+        @include breakpoint(medium){
+          width: 35%;
+        }
+
+        @include breakpoint(forMain){
+          width: 40%;
+        }
+
+        @include breakpoint(small){
+          padding-right: 30px;
+        }
+
+        @include breakpoint(narrow){
+          display: none;
+        }
+
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+          }
+        }
+      }
+
+      #menuIcon {
+        display: none;
+        @include breakpoint(narrow){
+          display: block;
+
+          i {
+            padding-right: 25px;
+            font-size: 30px;
+          }
+        }
+      }
+
+      .navIcons {
+        // border: 2px solid orange;
+        display: flex;
+        justify-content: space-between;
+        width: 12%;
+        padding-right: 45px;
+
+        @include breakpoint(medium){
+          width: 13%;
+        }
+
+        @include breakpoint(forMain){
+          width: 15%;
+          padding-right: 25px;
+        }
+
+        @include breakpoint(small){
+          display: none;
+        }
+
+        li {
+          list-style: none;
+          i {
+            font-size: 20px;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

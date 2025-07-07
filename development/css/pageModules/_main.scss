@@ -1,0 +1,704 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  // font-family: Arial;
+}
+
+main {
+
+  #boxOne {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px;
+
+    @include breakpoint(forMain){
+      display: none;
+    }
+
+
+    #forCenter {
+// border: 2px solid blue;
+max-width: 1400px;
+width: 100%;
+display: flex;
+justify-content: space-between;
+
+@include breakpoint(large){
+  width: 90%;
+}
+
+@include breakpoint(medium){
+  width: 90%;
+}
+
+#divOne {
+  // border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 16%;
+
+  @include breakpoint(large){
+    width: 18%;
+  }
+
+  @include breakpoint(medium){
+    width: 23%;
+  }
+
+  i {
+    font-size: 48px;
+    color: #b88e2f;
+    @include breakpoint(medium){
+      font-size: 35px;
+    }
+  }
+
+  #ulOne {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      list-style: none;
+
+      h5 {
+        font-size: 19px;
+        padding-bottom: 5px;
+
+        @include breakpoint(medium){
+          font-size: 17px;
+          padding-left: 5px;
+        }
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+#divTwo {
+  // border: 2px solid blue;
+  display: flex;
+    justify-content: space-between;
+  align-items: center;
+   width: 16%;
+    @include breakpoint(large){
+    width: 18%;
+  }
+
+  @include breakpoint(medium){
+    width: 23%;
+  }
+
+    i {
+     font-size: 48px;
+         color: #b88e2f;
+          @include breakpoint(medium){
+      font-size: 35px;
+    }
+  }
+
+  #ulTwo {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      list-style: none;
+
+      h5 {
+        font-size: 19px;
+        padding-bottom: 5px;
+         @include breakpoint(medium){
+          font-size: 17px;
+          padding-left: 5px;
+        }
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+#divThree {
+  // border: 2px solid green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 16%;
+   @include breakpoint(large){
+    width: 18%;
+  }
+
+  @include breakpoint(medium){
+      width: 23%;
+  }
+
+    i {
+     font-size: 48px;
+         color: #b88e2f;
+          @include breakpoint(medium){
+      font-size: 35px;
+    }
+  }
+
+  #ulThree {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      list-style: none;
+
+      h5 {
+        font-size: 19px;
+        padding-bottom: 5px;
+         @include breakpoint(medium){
+          font-size: 17px;
+          padding-left: 5px;
+        }
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+#divFour {
+  // border: 2px solid purple;
+  display: flex;
+   justify-content: space-between;
+  align-items: center;
+     width: 16%;
+
+  @include breakpoint(large){
+    width: 18%;
+  }
+
+  @include breakpoint(medium){
+    width: 23%;
+  }
+
+    i {
+    font-size: 48px;
+        color: #b88e2f;
+         @include breakpoint(medium){
+      font-size: 35px;
+    }
+  }
+
+  #ulFour {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      list-style: none;
+
+      h5 {
+        font-size: 19px;
+        padding-bottom: 5px;
+         @include breakpoint(medium){
+          font-size: 17px;
+          padding-left: 5px;
+        }
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+    }
+  }  
+
+  #boxTwo {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+    align-items: center;
+    
+
+    #forCenter {
+      // border: 2px solid blue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1400px;
+      width: 100%;
+
+
+      .twoThings {
+        // border: 2px solid green;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+
+        h3 {
+          font-size: 43px;
+          font-weight: bold;
+          padding-bottom: 15px;
+
+          @include breakpoint(forMain){
+            font-size: 35px;
+          }
+
+          @include breakpoint(narrow){
+            font-size: 40px;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: lighter;
+          padding-top: 5px;
+          width: 80%;
+          text-align: center;
+          line-height: 1.5;
+
+          @include breakpoint(forMain){
+            width: 70%;
+            padding-top: 0px;
+          }
+
+          @include breakpoint(narrow){
+            width: 90%;
+          }
+        }
+      }
+
+      .threeImages {
+        // border: 2px solid red;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        
+      @include breakpoint(medium){
+        display: flex;
+        width: 95%;
+      }
+
+      @include breakpoint(narrow){
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include breakpoint(narrow){
+        width: 85%;
+      }
+        
+
+        li {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+           padding: 20px 0px;
+          border-radius: 10px;
+
+          img {
+            padding: 0px 10px;
+            width: 90%;
+
+            @include breakpoint(medium){
+              width: 85%;
+            }
+          }
+
+          h4 {
+            padding-top: 25px;
+            font-size: 28px;
+
+            @include breakpoint(forMain){
+              font-size: 24px;
+            }
+
+            @include breakpoint(narrow){
+              font-size: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #boxThree {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+
+    #forCenter {
+      // border: 2px solid blue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 1400px;
+      width: 100%;
+
+      .oneHeading {
+        // border: 2px solid green;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+
+        li {
+          list-style: none;
+          h3 {
+            font-size: 43px;
+            font-weight: bold;
+            padding-bottom: 25px;
+
+            @include breakpoint(forMain){
+              font-size: 35px;
+            }
+
+            @include breakpoint(narrow){
+              font-size: 40px;
+            }
+          }
+        }
+      }
+
+      .fourBoxes1 {
+        // border: 2px solid red;
+        display: flex;
+        justify-content: space-between;
+          width: 95%;
+        padding: 25px 0px;
+
+        @include breakpoint(narrow){
+          display: flex;
+          flex-direction: column;
+          width: 85%;
+        }
+
+        li {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 25px 10px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+
+        @include breakpoint(narrow){
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      
+          
+
+          img {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+
+            @include breakpoint(medium){
+              width: 100%;
+              height: 200px;
+            }
+
+            @include breakpoint(forMain){
+              height: 150px;
+            }
+
+            @include breakpoint(narrow){
+              height: 300px;
+              width: 90%;
+            }
+          }
+
+          h4 {
+            font-size: 22px;
+            padding-top: 16px;
+            padding-left: 16px;
+            @include breakpoint(forMain){
+              font-size: 18px;
+            }
+
+            @include breakpoint(narrow){
+            padding-left: 0px;
+            font-size: 25px;
+            }
+          }
+          h5 {
+            font-size: 16px;
+            font-weight: lighter;
+            padding-top: 16px;
+            padding-left: 16px;
+
+            @include breakpoint(narrow){
+            padding-left: 0px;
+            font-size: 18;
+            }
+          }
+        }
+      }
+
+      .fourBoxes2 {
+        // border: 2px solid purple;
+      display: flex;
+        justify-content: space-between;
+          width: 95%;
+        padding: 25px 0px;
+
+        @include breakpoint(narrow){
+          display: flex;
+          flex-direction: column;
+          width: 85%;
+        }
+
+        li {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 25px 10px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+
+        @include breakpoint(narrow){
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      
+          
+
+          img {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+
+            @include breakpoint(medium){
+              width: 100%;
+              height: 200px;
+            }
+
+            @include breakpoint(forMain){
+              height: 150px;
+            }
+
+            @include breakpoint(narrow){
+              height: 300px;
+              width: 90%;
+            }
+          }
+
+          h4 {
+            font-size: 22px;
+            padding-top: 16px;
+            padding-left: 16px;
+            @include breakpoint(forMain){
+              font-size: 18px;
+            }
+
+            @include breakpoint(narrow){
+            padding-left: 0px;
+            font-size: 25px;
+            }
+          }
+          h5 {
+            font-size: 16px;
+            font-weight: lighter;
+            padding-top: 16px;
+            padding-left: 16px;
+
+            @include breakpoint(narrow){
+            padding-left: 0px;
+            font-size: 18;
+            }
+          }
+        }
+      }
+
+      button {
+        background-color: #b88e2f;
+        color: white;
+        border: none;
+        width: 160px;
+        padding: 15px;
+        text-align: center;
+        font-size: 16px;
+        margin: 75px 0px;
+        border-radius: 5px;
+
+        @include breakpoint(forMain){
+        padding: 12px;
+        width: 130px;
+        margin: 35px 0px;
+      }
+
+      @include breakpoint(narrow){
+        width: 150px;
+        padding: 15px;
+      }
+      }
+    }
+  }
+
+  #boxFour {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    background-color: #fcf8f3;
+    padding: 50px 0px;
+
+    #forCenter {
+      // border: 2px solid green;
+      display: flex;
+      justify-content: space-between;
+
+       @include breakpoint(narrow){
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+
+      .threeListItems {
+        // border: 2px solid blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 35%;
+        @include breakpoint(medium){
+          width: 45%;
+          padding-left: 55px;
+        }
+
+        @include breakpoint(narrow){
+          padding-left: 0px;
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+       
+
+        li {
+          list-style: none;
+
+          @include breakpoint(narrow){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          h3 {
+            font-size: 43px;
+            font-weight: bold;
+            width: 85%;
+            padding-bottom: 20px;
+
+            @include breakpoint(medium){
+              width: 90%;
+            }
+
+            @include breakpoint(forMain){
+              font-size: 35px;
+            }
+
+            @include breakpoint(narrow){
+              text-align: center;
+            }
+          }
+
+          p {
+            font-size: 18px;
+            font-weight: lighter;
+            width: 82%;
+            padding-bottom: 15px;
+            line-height: 1.5;
+
+           @include breakpoint(narrow){
+            text-align: center;
+           }
+          }
+
+          button {
+            background-color: #b88e2f;
+            color: white;
+            width: 35%;
+            padding: 15px;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+
+            @include breakpoint(forMain){
+              padding: 12px;
+        width: 130px;
+            }
+          }
+        }
+      }
+
+      .oneImage {
+        // border: 2px solid purple;
+        display: flex;
+        justify-content: space-evenly;
+        width: 60%;
+
+        @include breakpoint(medium){
+          width: 45%;
+        }
+
+        @include breakpoint(narrow){
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 75%;
+          padding-bottom: 30px;
+        }
+
+        li {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+
+          img {
+            width: 330px;
+            height: 500px;
+            border-radius: 5px;
+
+            @include breakpoint(medium){
+              width: 300px;
+              height: 470px;
+            }
+
+            @include breakpoint(small){
+              width: 250px;
+            }
+
+            @include breakpoint(narrow){
+              width: 340px;
+            }
+          }
+
+          #closet {
+            @include breakpoint(medium){
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  // font-family:;
+}
+
+header {
+  // border: 2px solid red;
+  height: fit-content;
+  @include breakpoint(large){
+    height:fit-content ;
+  }
+
+  .heroImage {
+    background-image: url("../../imgs/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    @include breakpoint(large){
+      height: 91vh;
+    }
+  }
+
+  .specialBox {
+    // border: 2px solid green;
+    position: absolute;
+    background-color: #fff3e3;
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    left: 885px;
+    top: 235px;
+
+    @include breakpoint(large){
+      // padding-right: 25px;
+      left: 785px;
+      top: 170px;
+    }
+
+    @include breakpoint(medium){
+      left: 435px;
+      width: 475px;
+    }
+
+    @include breakpoint(forMain){
+      // display: none;
+      left: 320px;
+      width: 400px;
+      top: 200px;
+    }
+
+    @include breakpoint(small){
+      left: 200px;
+    }
+
+    @include breakpoint(narrow){
+      // display: none;
+      left: 25px;
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 80px;
+    }
+
+    h5 {
+      font-size: 20px;
+      color: #333333;
+      padding-top: 45px;
+      padding-left: 40px;
+
+      @include breakpoint(medium){
+        padding-bottom: 10px;
+      }
+
+      @include breakpoint(forMain){
+        font-size: 16px;
+        padding-left: 25px;
+      }
+
+      @include breakpoint(narrow){
+        font-size: 20px;
+        text-align: center;
+        padding-left: 0px;
+      }
+     
+    }
+
+    h2 {
+      font-size: 50px;
+      color: #b88e2f;
+      padding-top: 5px;
+      padding-left: 40px;
+
+      @include breakpoint(medium){
+        font-size: 40px;
+        width: 75%;
+      }
+
+      @include breakpoint(forMain){
+        font-size:30px ;
+      }
+
+      @include breakpoint(narrow){
+        font-size: 30px;
+           padding-left: 0px;
+            text-align: center;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      color: #333333;
+      width: 75%;
+      padding-top: 22px;
+      padding-left: 40px;
+      line-height: 1.5;
+
+      @include breakpoint(medium){
+        width: 80%;
+        padding-top: 18px;
+      }
+
+      @include breakpoint(forMain){
+        font-size: 15px;
+      }
+
+      @include breakpoint(narrow){
+        font-size: 14px;
+           padding-left: 0px;
+           width: 82%;
+           text-align: center;
+      }
+    }
+
+    button {
+      background-color: #b88e2f;
+      border: none;
+      color: aliceblue;
+      text-align: center;
+      width: 160px;
+      padding: 15px;
+      margin-top: 22px;
+      margin-left: 40px;
+      margin-bottom: 45px;
+      border-radius: 5px;
+
+      @include breakpoint(forMain){
+        padding: 12px;
+        width: 130px;
+      }
+
+      @include breakpoint(narrow){
+        width: 100px;
+           margin-left: 0px;
+      }
+    }
+  }
+}
