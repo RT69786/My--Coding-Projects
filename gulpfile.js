@@ -68,3 +68,10 @@ exports.default = series(
   browsersyncServe,
   watchTask
 );
+
+exports.build = series(
+  htmlTask,
+  scssTask,
+  jsTask,
+  imgsTask
+);
